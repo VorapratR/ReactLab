@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CharacterCard from './CharacterCard';
 
+const word = "Hello"
 class App extends Component {
-  x ="Hello"
-  y =" {''World''}"
+  
   render() {
     return (
       <div>
-       {this.x + this.y} 
+       
+       {
+         Array.from(word).map((c,i)=> <CharacterCard value={c} key={i}/>)
+       }
+       
       </div>
     );
   }
