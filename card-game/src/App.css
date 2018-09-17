@@ -22,6 +22,11 @@
   font-size: large;
 }
 
+.activeCard {
+  color: red;
+  background: pink;
+ }
+
 .card {
   display: inline-block;
   text-align: center;
