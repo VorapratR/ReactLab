@@ -3,10 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  x ="Hello"
+  y =" {''World''}"
   render() {
     return (
-      <div className="App">
-        Hello World
+      <div>
+       {this.x + this.y} 
       </div>
     );
   }
