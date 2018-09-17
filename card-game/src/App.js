@@ -8,7 +8,7 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div >
        
        {
          Array.from(word).map((c,i)=> <CharacterCard value={c} key={i}/>)
