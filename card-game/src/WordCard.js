@@ -17,18 +17,15 @@ export default class WordCard extends Component{
         super(props)
         this.state = prepareStateFromWord(this.props.value)
     }
-    //activate =  c => { console.log(`${c} has been activated.`) } 
     activateHandler = (c) => {
-        //console.log(`${c} has been activate`)
-        let guess = [this.state.guess+c]
-        console.log("guess-- " + guess.length)
-        console.log('word-- ' + this.state.word.length)
+        let guess = [this.state.guess]+ c
+        console.log("index : " + guess.length +" / " + this.state.word.length )
         this.setState({guess})
         if (guess.length === this.state.chars.length){
-            if(guess.join('').toString() === this.state.word){
-                this.setState({guess:[],completed:true})
+            if(guess === this.state.word){
+                this.setState({guess: [],complete:true})
             }else{
-                this.setState({guess:[],attempt:this.state.attempt + 1 })
+                this.setState({guess:[],attempt:this.state.attempt+1 })
             }
         }
     }
@@ -36,12 +33,14 @@ export default class WordCard extends Component{
     render(){
         return(
             <div className= "App">
-            //{Array.from(this.props.value).map((c,i) => <CharacterCard value={c} key= {i} activationHandler={this.activateHandler}/>)}
             { Array.from(this.state.chars).map( 
-                (c,i)=> <CharacterCard value = {c} key = {i} attempt={this.state.attempt} activateHandler={this.activateHandler}/> 
-            )}
+                    (c,i)=> <CharacterCard value = {c} key = {i} attempt={this.state.attempt} 
+                    activateHandler={this.activateHandler}/> 
+                )
+            }
+            <p>ครั้งที่ : {this.state.attempt}</p>
+            <h1>{this.state.complete? "มึงชนะ!!!" : ""}</h1>
             </div>
         )
     }
-
 }
