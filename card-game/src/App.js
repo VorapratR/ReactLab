@@ -10,7 +10,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <WordCard value = {word}/>
+      <p  className="App">NAME :    
+      <input type="string" onBlur={this.onBlur} /></p> 
+      <WordCard value = {word}/>
+       
       </div>
     );
   }
