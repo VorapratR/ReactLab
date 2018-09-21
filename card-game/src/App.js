@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <WordCard value = {word}/>
         <p className="Login">NAME :    
         <input type="text" onBlur={this.onBlur} />
