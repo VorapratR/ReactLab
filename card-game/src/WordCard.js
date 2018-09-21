@@ -38,8 +38,8 @@ export default class WordCard extends Component{
                     activateHandler={this.activateHandler}/> 
                 )
             }
-            <p className="card">ครั้งที่ : {this.state.attempt}</p>
-            <h1>{this.state.complete? "มึงชนะ!!!" : ""}</h1>
+            <p className="ans">ครั้งที่ : {this.state.attempt}</p>
+            <h1 >{this.state.complete? "มึงชนะ!!!" : ""}</h1>
             </div>
         )
     }
