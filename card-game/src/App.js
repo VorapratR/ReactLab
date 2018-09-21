@@ -12,7 +12,7 @@ class App extends Component {
         <p className="Login">NAME :    
         <input type="text" onBlur={this.onBlur} /></p>
         
-      }<img src ='http://www.jwam.com.au/media/images/easy-photogallery/Star-Wars-Millenium-Falcon-Render.jpg'/> 
+      }<img src ='./Star-Wars-Millenium-Falcon-Render.jpg'/> 
       <WordCard value = {word}/> 
       </div>
     );
